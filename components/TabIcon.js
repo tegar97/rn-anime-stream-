@@ -5,7 +5,15 @@ import COLORS from "./../constant/colors";
 const TabIcon = ({ focused, icon }) => {
   return (
     <View style={styles.container}>
-      <Image source={icon} resizeMode="contain" style={styles.image} />
+      <Image
+        source={icon}
+        resizeMode="contain"
+        style={{
+          width: 25,
+          height: 25,
+          tintColor: focused ? COLORS.primary : "red",
+        }}
+      />
     </View>
   );
 };
@@ -18,7 +26,6 @@ const styles = StyleSheet.create({
   image: {
     width: 25,
     height: 25,
-    tintColor: focused ? COLORS.primary : COLORS.gray,
   },
 });
 

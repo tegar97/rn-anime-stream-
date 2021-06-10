@@ -1,20 +1,21 @@
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
+import { View, Text, StyleSheet, Button, SafeAreaView } from "react-native";
+import Banner from "../components/Banner";
+import COLORS from "../constant/colors";
 
 function HomeScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go To Details "
-        onPress={() =>
-          navigation.navigate("Detail", {
-            Name: "tegar",
-          })
-        }
-      />
-    </View>
+    <SafeAreaView style={styles.screen}>
+      <Banner />
+    </SafeAreaView>
   );
 }
 
+const styles = StyleSheet.create({
+  screen: {
+    flex: 1,
+    backgroundColor: COLORS.black,
+    padding: 30,
+  },
+});
 export default HomeScreen;
