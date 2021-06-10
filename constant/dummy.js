@@ -1,34 +1,9 @@
 export const newSeason = [
   {
     id: 1,
-    name: "Barbarians",
-    thumbnail: require("../assets/images/series/barbarians/barbarians_cover.jpg"),
-    stillWatching: [
-      {
-        id: 1,
-        profile: require("../assets/images/dummy_profile/1.jpg"),
-      },
-      {
-        id: 2,
-        profile: require("../assets/images/dummy_profile/2.jpg"),
-      },
-      {
-        id: 3,
-        profile: require("../assets/images/dummy_profile/3.jpg"),
-      },
-      {
-        id: 4,
-        profile: require("../assets/images/dummy_profile/4.jpg"),
-      },
-      {
-        id: 5,
-        profile: require("../assets/images/dummy_profile/5.jpg"),
-      },
-      {
-        id: 6,
-        profile: require("../assets/images/dummy_profile/6.jpg"),
-      },
-    ],
+    name: "Demon Slayer: Kimetsu no Yaiba",
+    thumbnail: require("../assets/images/series/demon_slayer/demon_cover.jpg"),
+
     details: {
       image: require("../assets/images/series/barbarians/barbarians.jpg"),
       age: "16+",
@@ -44,24 +19,7 @@ export const newSeason = [
     id: 2,
     name: "Bridgerton",
     thumbnail: require("../assets/images/series/bridgerton/bridgerton_cover.jpg"),
-    stillWatching: [
-      {
-        id: 1,
-        profile: require("../assets/images/dummy_profile/6.jpg"),
-      },
-      {
-        id: 2,
-        profile: require("../assets/images/dummy_profile/7.jpg"),
-      },
-      {
-        id: 3,
-        profile: require("../assets/images/dummy_profile/3.jpg"),
-      },
-      {
-        id: 4,
-        profile: require("../assets/images/dummy_profile/4.jpg"),
-      },
-    ],
+
     details: {
       image: require("../assets/images/series/bridgerton/bridgerton.jpg"),
       age: "18+",
@@ -77,7 +35,6 @@ export const newSeason = [
     id: 3,
     name: "Money Heist",
     thumbnail: require("../assets/images/series/money_heist/money_heist_cover.jpg"),
-    stillWatching: [],
     details: {
       image: require("../assets/images/series/money_heist/money_heist.jpg"),
       age: "16+",
@@ -93,20 +50,7 @@ export const newSeason = [
     id: 4,
     name: "Salvation",
     thumbnail: require("../assets/images/series/salvation/salvation_cover.jpg"),
-    stillWatching: [
-      {
-        id: 1,
-        profile: require("../assets/images/dummy_profile/1.jpg"),
-      },
-      {
-        id: 2,
-        profile: require("../assets/images/dummy_profile/2.jpg"),
-      },
-      {
-        id: 3,
-        profile: require("../assets/images/dummy_profile/3.jpg"),
-      },
-    ],
+
     details: {
       image: require("../assets/images/series/salvation/salvation.jpg"),
       age: "13+",
