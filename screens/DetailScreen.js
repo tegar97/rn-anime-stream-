@@ -65,7 +65,13 @@ function DetailScreen() {
         </LinearGradient>
       </View>
 
-      <View style={{ paddingHorizontal: 25 }}>
+      <View
+        style={{
+          borderBottomColor: "#dcdedc",
+          borderWidth: 1,
+          justifyContent: "center",
+        }}
+      >
         <View
           style={{
             justifyContent: "flex-end",
@@ -119,6 +125,93 @@ function DetailScreen() {
                 </TouchableOpacity>
               )}
             </Text>
+          </View>
+          <View
+            style={{
+              marginTop: 10,
+            }}
+          >
+            <View
+              style={{
+                marginBottom: "10",
+                flexDirection: "row",
+                marginBottom: 10,
+              }}
+            >
+              <Text
+                style={{
+                  color: COLORS.primary,
+                  fontSize: 13,
+                  fontFamily: "Roboto-Bold",
+                }}
+              >
+                Author :
+              </Text>
+              <Text
+                style={{
+                  marginLeft: 10,
+                  color: "#dcdedc",
+                  fontSize: 13,
+                  fontFamily: "Roboto-Regular",
+                }}
+              >
+                Akutami Gege
+              </Text>
+            </View>
+            <View
+              style={{
+                marginBottom: "10",
+                flexDirection: "row",
+                marginBottom: 10,
+              }}
+            >
+              <Text
+                style={{
+                  color: COLORS.primary,
+                  fontSize: 13,
+                  fontFamily: "Roboto-Bold",
+                }}
+              >
+                Studio :
+              </Text>
+              <Text
+                style={{
+                  marginLeft: 10,
+                  color: "#dcdedc",
+                  fontSize: 13,
+                  fontFamily: "Roboto-Regular",
+                }}
+              >
+                Mappa
+              </Text>
+            </View>
+            <View
+              style={{
+                marginBottom: "10",
+                flexDirection: "row",
+                marginBottom: 10,
+              }}
+            >
+              <Text
+                style={{
+                  color: COLORS.primary,
+                  fontSize: 13,
+                  fontFamily: "Roboto-Bold",
+                }}
+              >
+                Cast :
+              </Text>
+              <Text
+                style={{
+                  marginLeft: 10,
+                  color: "#dcdedc",
+                  fontSize: 13,
+                  fontFamily: "Roboto-Regular",
+                }}
+              >
+                Jurayaki eki,Yuna Uchida,Akami satoso
+              </Text>
+            </View>
           </View>
         </View>
       </View>
