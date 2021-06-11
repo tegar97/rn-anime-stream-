@@ -8,9 +8,11 @@ import {
   Image,
 } from "react-native";
 import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import COLORS from "../constant/colors";
 import dummyData from "../constant/dummy";
+import icons from "../constant/icons";
 import { SIZES } from "../constant/theme";
-
+import ProgressBar from "./../components/ProgressBar";
 const ContinueWatching = () => {
   return (
     <View style={styles.container}>
@@ -48,9 +50,43 @@ const ContinueWatching = () => {
                     style={{
                       width: SIZES.width / 2,
                       height: SIZES.width / 3 + 10,
-                      borderRadius: 10,
+                      borderRadius: 12,
                       opacity: 0.7,
                     }}
+                  />
+                  <View
+                    style={{
+                      position: "absolute",
+                      bottom: 20,
+                      justifyContent: "flex-end",
+                      alignItems: "flex-end",
+                      zIndex: 2,
+                      width: "100%",
+                      paddingHorizontal: 10,
+                    }}
+                  >
+                    <Image
+                      source={icons.play_button}
+                      style={{
+                        width: 40,
+                        height: 40,
+                        tintColor: "#fff",
+                        backgroundColor: "rgba(93, 173, 222,.5)",
+                        overflow: "hidden",
+                        borderRadius: 20,
+                        marginVertical: 10,
+                      }}
+                    />
+                  </View>
+                  <ProgressBar
+                    containerStyle={{
+                      position: "absolute",
+                      bottom: 0,
+                      zIndex: 2,
+                      width: "100%",
+                    }}
+                    barStyle={{ height: 3 }}
+                    barPercentege={item.progress}
                   />
                 </View>
               </View>
