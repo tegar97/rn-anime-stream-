@@ -8,12 +8,14 @@ import {
   ImageBackground,
   Button,
   TouchableOpacity,
+  Image,
 } from "react-native";
 import dummyData from "../constant/dummy";
 import { SIZES } from "../constant/theme";
 import { Ionicons } from "@expo/vector-icons";
 import COLORS from "../constant/colors";
 import { TouchableHighlight } from "react-native-gesture-handler";
+import icons from "../constant/icons";
 
 const Banner = () => {
   const newSeasonScrollX = React.useRef(new Animated.Value(0)).current;
@@ -41,6 +43,29 @@ const Banner = () => {
               opacity: 0.62,
             }}
           >
+            <View style={styles.IconContainer}>
+              <TouchableOpacity>
+                <Image
+                  source={icons.info}
+                  style={{
+                    width: 30,
+                    height: 30,
+                    tintColor: "white",
+                    marginRight: 10,
+                  }}
+                />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <Image
+                  source={icons.add}
+                  style={{
+                    width: 30,
+                    height: 30,
+                    tintColor: "white",
+                  }}
+                />
+              </TouchableOpacity>
+            </View>
             <View
               style={{
                 flex: 1,
@@ -140,6 +165,14 @@ const styles = StyleSheet.create({
     justifyContent: "flex-end",
     alignItems: "flex-end",
     width: "100%",
+  },
+  IconContainer: {
+    flexDirection: "row",
+    justifyContent: "flex-end",
+
+    marginHorizontal: 15,
+    marginVertical: 15,
+    flex: 1,
   },
 });
 
