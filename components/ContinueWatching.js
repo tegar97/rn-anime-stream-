@@ -1,13 +1,96 @@
 import React from "react";
-import { View, Text, FlatList, Animated, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  FlatList,
+  Animated,
+  StyleSheet,
+  Image,
+} from "react-native";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import dummyData from "../constant/dummy";
+import { SIZES } from "../constant/theme";
 
 const ContinueWatching = () => {
   return (
-    <View style={{ paddingHorizontal: 24 }}>
-      <Text style={{ color: "#fff" }}>Continue Watching</Text>
+    <View style={styles.container}>
+      <Text style={styles.title}>Continue Watching</Text>
+      <FlatList
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{ marginTop: 20 }}
+        data={dummyData.continueWatching}
+        keyExtractor={(item) => `${item.id}`}
+        renderItem={({ item, index }) => {
+          return (
+            <TouchableWithoutFeedback>
+              <View
+                style={{
+                  marginLeft: index === 0 ? 0 : 20,
+                  marginRight:
+                    index == dummyData.continueWatching.length - 1 ? 24 : 0,
+                }}
+              >
+                <View>
+                  <View style={styles.animeTitleContainer}>
+                    <Text style={styles.animeTitle}>
+                      {item.name.length > 30
+                        ? item.name.substring(0, 25) + " .."
+                        : item.name}
+                    </Text>
+                    <Text style={styles.currentEpisode}>
+                      {item.currentEpisode}
+                    </Text>
+                  </View>
+                  <Image
+                    source={item.thumbnail}
+                    resizeMode="cover"
+                    style={{
+                      width: SIZES.width / 2,
+                      height: SIZES.width / 3 + 10,
+                      borderRadius: 10,
+                      opacity: 0.7,
+                    }}
+                  />
+                </View>
+              </View>
+            </TouchableWithoutFeedback>
+          );
+        }}
+      />
     </View>
   );
 };
 
-const style = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    paddingHorizontal: 24,
+    marginTop: 20,
+  },
+  title: {
+    fontFamily: "Roboto-Bold",
+    fontSize: 24,
+
+    color: "#dcdedc",
+    letterSpacing: 1.4,
+  },
+  animeTitleContainer: {
+    position: "absolute",
+    zIndex: 2,
+    padding: 8,
+    width: "90%",
+  },
+  animeTitle: {
+    fontFamily: "Roboto-Bold",
+    fontSize: 18,
+    color: "#dcdedc",
+    letterSpacing: 1.6,
+  },
+  currentEpisode: {
+    fontFamily: "Roboto-Regular",
+    fontSize: 15,
+    color: "#dcdedc",
+    letterSpacing: 1.6,
+  },
+});
 export default ContinueWatching;

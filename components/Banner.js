@@ -98,6 +98,7 @@ const Banner = () => {
         scrollEventThrottle={16}
         decelerationRate={0}
         data={dummyData.newSeason}
+        keyExtractor={(item) => `${item.id}`}
         onScroll={Animated.event(
           [
             {

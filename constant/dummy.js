@@ -49,7 +49,7 @@ export const animeSeries = [
     genre: "Action",
     ratings: 8.3,
     season: "SEASON 1",
-    currentEpisode: 'S1 : E8 "Episode 8 : The Old Head"',
+    currentEpisode: 'S1:EP3"',
     runningTime: "45m",
     progress: "50%",
   },
@@ -61,8 +61,8 @@ export const continueWatching = [
     name: "Jujutsu Kaisen",
     slug: "jujutsu-kaisen",
     thumbnail: require("../assets/continue_watching/jujutsu_kaisen.jpeg"),
-    overallProgress: "30%",
-    episode: 3,
+    progress: "30%",
+    currentEpisode: "S1:EP3",
   },
   {
     id: 2,
@@ -70,8 +70,8 @@ export const continueWatching = [
     slug: "kaguya-sama-love-is-war",
 
     thumbnail: require("../assets/continue_watching/kaguya_sama.jpg"),
-    overallProgress: "40%",
-    episode: 2,
+    progress: "40%",
+    currentEpisode: "S1:EP2",
   },
   {
     id: 3,
@@ -79,16 +79,16 @@ export const continueWatching = [
     slug: "fate",
 
     thumbnail: require("../assets/continue_watching/fate.jpg"),
-    overallProgress: "10%",
-    episode: 0,
+    progress: "10%",
+    currentEpisode: "Movie",
   },
   {
     id: 4,
     name: "Gintama: The Final",
     slug: "gintama-the-final",
     thumbnail: require("../assets/continue_watching/gintama.jpg"),
-    overallProgress: "10%",
-    episode: 0,
+    progress: "10%",
+    currentEpisode: 'Movie"',
   },
 ];
 
