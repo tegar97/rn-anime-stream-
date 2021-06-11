@@ -95,24 +95,24 @@ export const continueWatching = [
 const favorite = [
   {
     id: 1,
-    thumbnail: require("../assets/continue_watching/jujutsu_kaisen.jpeg"),
+    thumbnail: require("../assets/MyList/jujutsu_cover.png"),
     NewEpisode: true,
   },
   {
-    id: 1,
-    thumbnail: require("../assets/continue_watching/aot.jpeg"),
+    id: 2,
+    thumbnail: require("../assets/MyList/aot.jpg"),
     progress: "30%",
     NewEpisode: true,
   },
   {
-    id: 1,
-    thumbnail: require("../assets/continue_watching/gintama.jpeg"),
+    id: 3,
+    thumbnail: require("../assets/MyList/gintama.jpg"),
     progress: "30%",
     NewEpisode: false,
   },
   {
-    id: 1,
-    thumbnail: require("../assets/continue_watching/your_name.jpeg"),
+    id: 4,
+    thumbnail: require("../assets/MyList/your_name.png"),
     progress: "30%",
     NewEpisode: false,
   },
