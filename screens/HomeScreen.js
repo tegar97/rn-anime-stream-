@@ -11,6 +11,7 @@ import Banner from "../components/Banner";
 import ContinueWatching from "../components/ContinueWatching";
 import COLORS from "../constant/colors";
 import MyList from "../components/MyList";
+import Trending from "../components/Trending";
 function HomeScreen({ navigation }) {
   return (
     <SafeAreaView style={styles.screen}>
@@ -18,6 +19,7 @@ function HomeScreen({ navigation }) {
         <Banner />
         <ContinueWatching />
         <MyList />
+        <Trending />
       </ScrollView>
     </SafeAreaView>
   );
