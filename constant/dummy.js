@@ -92,6 +92,32 @@ export const continueWatching = [
   },
 ];
 
-const dummyData = { newSeason, continueWatching };
+const favorite = [
+  {
+    id: 1,
+    thumbnail: require("../assets/continue_watching/jujutsu_kaisen.jpeg"),
+    NewEpisode: true,
+  },
+  {
+    id: 1,
+    thumbnail: require("../assets/continue_watching/aot.jpeg"),
+    progress: "30%",
+    NewEpisode: true,
+  },
+  {
+    id: 1,
+    thumbnail: require("../assets/continue_watching/gintama.jpeg"),
+    progress: "30%",
+    NewEpisode: false,
+  },
+  {
+    id: 1,
+    thumbnail: require("../assets/continue_watching/your_name.jpeg"),
+    progress: "30%",
+    NewEpisode: false,
+  },
+];
+
+const dummyData = { newSeason, continueWatching, favorite };
 
 export default dummyData;
