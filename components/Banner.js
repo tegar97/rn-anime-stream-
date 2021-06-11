@@ -41,15 +41,6 @@ const Banner = () => {
             <View
               style={{
                 flex: 1,
-                justifyContent: "flex-start",
-                alignItems: "flex-end",
-              }}
-            >
-              {" "}
-            </View>
-            <View
-              style={{
-                flex: 1,
                 justifyContent: "flex-end",
                 alignItems: "flex-start",
               }}
