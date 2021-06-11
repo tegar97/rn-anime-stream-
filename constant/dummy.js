@@ -1,6 +1,7 @@
 export const newSeason = [
   {
     id: 1,
+    slug: "demon-slayer",
     EnglishName: "Demon Slayer",
     JapanName: "Kimetsu No Yaiba",
     thumbnail: require("../assets/images/series/demon_slayer/demon_cover.jpg"),
@@ -21,6 +22,8 @@ export const newSeason = [
     id: 2,
     EnglishName: "Sorcery fight",
     JapanName: "Jujutsu Kaisen ",
+    slug: "jujutsu-kaisen",
+
     thumbnail: require("../assets/images/series/jujutsu_kaisen/jujutsu_cover.png"),
 
     details: {
@@ -56,6 +59,7 @@ export const continueWatching = [
   {
     id: 1,
     name: "Jujutsu Kaisen",
+    slug: "jujutsu-kaisen",
     thumbnail: require("../assets/continue_watching/jujutsu_kaisen.jpeg"),
     overallProgress: "30%",
     episode: 3,
@@ -63,6 +67,8 @@ export const continueWatching = [
   {
     id: 2,
     name: "Kaguya Sama  Love Is War",
+    slug: "kaguya-sama-love-is-war",
+
     thumbnail: require("../assets/continue_watching/kaguya_sama.jpg"),
     overallProgress: "40%",
     episode: 2,
@@ -70,6 +76,8 @@ export const continueWatching = [
   {
     id: 3,
     name: "Gekijouban Fate/Stay Night: Heaven's Feel - II. Lost Butterfly",
+    slug: "fate",
+
     thumbnail: require("../assets/continue_watching/fate.jpg"),
     overallProgress: "10%",
     episode: 0,
@@ -77,6 +85,7 @@ export const continueWatching = [
   {
     id: 4,
     name: "Gintama: The Final",
+    slug: "gintama-the-final",
     thumbnail: require("../assets/continue_watching/gintama.jpg"),
     overallProgress: "10%",
     episode: 0,
