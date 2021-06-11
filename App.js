@@ -39,6 +39,7 @@ function App() {
           initialRouteName={"Home"}
         >
           <Stack.Screen name="Home" component={Tabs} />
+          <Stack.Screen name="Detail" component={DetailScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );

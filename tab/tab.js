@@ -13,11 +13,56 @@ const Tabs = () => {
     <Tab.Navigator
       tabBarOptions={{
         showLabel: false,
+        style: {
+          position: "absolute",
+          bottom: 0,
+          left: 0,
+          right: 0,
+          backgroundColor: "#010a1b",
+
+          borderTopColor: "transparent",
+          borderRadius: 10,
+          paddingHorizontal: 20,
+          height: 70,
+        },
       }}
-      style={styles.TabContainer}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="MovieDetail" component={DetailScreen} />
+      <Tab.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabIcon focused={focused} icon={icons.home} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Play"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabIcon focused={focused} icon={icons.play_button} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Search"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabIcon focused={focused} icon={icons.search} />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Profile"
+        component={HomeScreen}
+        options={{
+          tabBarIcon: ({ focused }) => (
+            <TabIcon focused={focused} icon={icons.profile} />
+          ),
+        }}
+      />
     </Tab.Navigator>
   );
 };
@@ -29,7 +74,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     elevation: 0,
-    backgroundColor: COLORS.black,
+    backgroundColor: "red",
     borderTopColor: "transparent",
     height: 100,
   },

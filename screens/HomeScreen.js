@@ -28,7 +28,7 @@ function HomeScreen({ navigation }) {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: COLORS.black,
+    backgroundColor: "#010a1b",
   },
 });
 export default HomeScreen;
