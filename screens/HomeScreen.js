@@ -18,7 +18,7 @@ function HomeScreen({ navigation }) {
       <ScrollView>
         <Banner />
         <ContinueWatching />
-        <MyList />
+        <MyList navigation={navigation} />
         <Trending />
       </ScrollView>
     </SafeAreaView>

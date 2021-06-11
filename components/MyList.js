@@ -13,7 +13,7 @@ import dummyData from "../constant/dummy";
 import { SIZES } from "../constant/theme";
 import PosterComponent from "./PosterComponent";
 
-const MyList = () => {
+const MyList = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.textContainer}>
@@ -30,7 +30,13 @@ const MyList = () => {
           data={dummyData.favorite}
           keyExtractor={(item) => `${item.id}`}
           renderItem={({ item, index }) => {
-            return <PosterComponent item={item} index={index} />;
+            return (
+              <PosterComponent
+                navigation={navigation}
+                item={item}
+                index={index}
+              />
+            );
           }}
         />
       </View>

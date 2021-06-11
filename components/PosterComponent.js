@@ -4,9 +4,11 @@ import COLORS from "../constant/colors";
 import dummyData from "../constant/dummy";
 import { SIZES } from "../constant/theme";
 
-const PosterComponent = ({ item, index }) => {
+const PosterComponent = ({ item, index, navigation }) => {
   return (
-    <TouchableWithoutFeedback>
+    <TouchableWithoutFeedback
+      onPress={() => navigation.navigate("DetailScreen")}
+    >
       <View
         style={{
           marginLeft: index === 0 ? 0 : 20,
