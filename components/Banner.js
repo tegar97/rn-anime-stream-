@@ -7,10 +7,13 @@ import {
   TouchableWithoutFeedback,
   ImageBackground,
   Button,
+  TouchableOpacity,
 } from "react-native";
 import dummyData from "../constant/dummy";
 import { SIZES } from "../constant/theme";
 import { Ionicons } from "@expo/vector-icons";
+import COLORS from "../constant/colors";
+import { TouchableHighlight } from "react-native-gesture-handler";
 
 const Banner = () => {
   const newSeasonScrollX = React.useRef(new Animated.Value(0)).current;
@@ -35,7 +38,7 @@ const Banner = () => {
             }}
             imageStyle={{
               borderRadius: 20,
-              opacity: 0.75,
+              opacity: 0.62,
             }}
           >
             <View
@@ -46,20 +49,12 @@ const Banner = () => {
               }}
             >
               <View style={styles.bannerInfo}>
-                <Text style={{ color: "#fff", fontSize: 15 }}>
-                  Kayaharu Gatouge
-                </Text>
-                <Text
-                  style={{
-                    color: "#fff",
-                    fontSize: 24,
-                    fontWeight: "bold",
-                    marginTop: 5,
-                  }}
-                >
-                  Demon Slayer : Kimetsu No Yaiba
-                </Text>
-                <Text style={{ color: "#fff" }}>Demon Slayer</Text>
+                <Text style={styles.authorText}>Kayaharu Gatouge</Text>
+                <View style={{ marginBottom: 10 }}>
+                  <Text style={styles.titleText}>Demon Slayer :</Text>
+                  <Text style={styles.JapanName}>Kimetsu No Yaiba</Text>
+                </View>
+                <Text style={styles.studioName}>Ufotable Studio</Text>
               </View>
             </View>
           </ImageBackground>
@@ -104,8 +99,47 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     padding: 10,
     marginHorizontal: 10,
-    marginVertical: 10,
+    marginVertical: 18,
     width: "80%",
+  },
+  authorText: {
+    fontSize: 17,
+    letterSpacing: 1.2,
+    fontFamily: "Roboto-Light",
+    color: "#fff",
+    marginTop: 10,
+  },
+  titleText: {
+    fontSize: 26,
+    fontFamily: "Roboto-Bold",
+    color: "#fff",
+    marginTop: 5,
+    letterSpacing: 1,
+  },
+  JapanName: {
+    fontSize: 26,
+    fontFamily: "Roboto-Bold",
+    color: "#ffff",
+    letterSpacing: 1.5,
+  },
+  studioName: {
+    fontSize: 12,
+    fontFamily: "Roboto-Light",
+    color: "#ffff",
+    letterSpacing: 1.3,
+  },
+  ButtoonWatchNow: {
+    backgroundColor: COLORS.primary,
+    justifyContent: "center",
+    alignItems: "center",
+    borderRadius: 80,
+
+    color: "#ffff",
+  },
+  buttonContainer: {
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
+    width: "100%",
   },
 });
 
