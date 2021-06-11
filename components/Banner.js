@@ -49,12 +49,12 @@ const Banner = () => {
               }}
             >
               <View style={styles.bannerInfo}>
-                <Text style={styles.authorText}>Kayaharu Gatouge</Text>
+                <Text style={styles.authorText}>{item.details.author}</Text>
                 <View style={{ marginBottom: 10 }}>
-                  <Text style={styles.titleText}>Demon Slayer :</Text>
-                  <Text style={styles.JapanName}>Kimetsu No Yaiba</Text>
+                  <Text style={styles.titleText}>{item.EnglishName}:</Text>
+                  <Text style={styles.JapanName}>{item.JapanName}</Text>
                 </View>
-                <Text style={styles.studioName}>Ufotable Studio</Text>
+                <Text style={styles.studioName}>{item.details.Studio}</Text>
               </View>
             </View>
           </ImageBackground>
